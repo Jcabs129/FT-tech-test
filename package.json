@@ -6,7 +6,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npx playwright test --project=chromium"
+    "test": "npx playwright test --project=chromium",
+    "api": "npx playwright test --grep @api --project=chromium"
   },
   "keywords": [],
   "author": "",
