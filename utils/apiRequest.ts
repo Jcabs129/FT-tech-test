@@ -2,7 +2,6 @@ import { APIRequestContext, APIResponse, expect } from '@playwright/test';
 
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 
-
 /**
  * Dynamic API request function
  */

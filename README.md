@@ -3,18 +3,37 @@
 Small Playwright test suite covering UI and API flows for Freetrade web.
 
 ### Table of Contents
-- [Stack](#stack)
+- [Setup](#setup)
+- [Cli](#cli)
 - [Project Structure](#project-structure)
-- [CLI Usage](#cli-usage)
 - [Configuration](#configuration)
 - [Conventions](#conventions)
 - [Simple GitHub Workflow](#simple-github-workflow)
 - [Notes](#notes)
 
-### Stack
-- **Runtime**: Node.js
-- **Tests**: Playwright Test (`@playwright/test`)
-- **language**: typescript
+## Setup
+
+**Get started**
+  ```bash
+  git clone https://github.com/Jcabs129/FT-tech-test.git
+  npm install
+  ```
+
+### CLI
+- **Run all tests (Chromium, list reporter):**
+  ```bash
+  npm run test
+  ```
+
+  - **Run API tests only (tagged via grep):**
+  ```bash
+  npx playwright test --project=api
+  ```
+
+  - **Run UI tests only:**
+  ```bash
+  npx playwright test --project=ui
+  ```
 
 ### Project Structure
 ```
@@ -41,21 +60,7 @@ Utilities:
 - `utils/assertNumericValues.ts` (numeric comparisons)
 - `utils/helpers.ts` (misc helpers)
 
-### CLI Usage
-- **Run all tests (Chromium, list reporter):**
-```bash
-npm run test
-```
 
-- **Run API tests only (tagged via grep):**
-```bash
-npx playwright test --project=api
-```
-
-- **Run UI tests only:**
-```bash
-npx playwright test --project=ui
-```
 
 ### Configuration Highlights
 - Base URL: `https://web.freetrade.io`
