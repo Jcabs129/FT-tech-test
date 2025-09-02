@@ -4,7 +4,7 @@ import { apiRequest } from '../../utils/apiUtils.ts'
 
 test.describe('API Testing - CRUD', () => {
 
-  test.only('verify 200 success for palantir', { tag: '@api' },
+  test('verify 200 success for palantir', { tag: '@api' },
      async ({ request }) => {
       const response = await apiRequest(request, 'POST', 'US', 'PLTR');
       expect(response.ok()).toBeTruthy();
@@ -12,7 +12,8 @@ test.describe('API Testing - CRUD', () => {
   })
 
  
-    test('verify 200 success for multiple stocks', { tag: '@api' }, async ({ request }) => {
+    test('verify 200 success for multiple stocks', { tag: '@api' }, 
+      async ({ request }) => {
       const stocks = ['GOOGL', 'PLTR', 'META', 'TSLA'];
 
       for(const stock of stocks) {
