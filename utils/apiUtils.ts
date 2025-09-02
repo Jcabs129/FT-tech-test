@@ -12,12 +12,11 @@ export async function apiRequest(
   locale: string,
   stockTicker: string
 ): Promise<APIResponse> {
-  const endpoint = `/universe/${locale}/${stockTicker}`;
 
+  const endpoint = `/universe/${locale}/${stockTicker}`;
   const headers = {
     'content-type': 'application/json',
   }
-
   let response: APIResponse;
 
   switch (method) {
