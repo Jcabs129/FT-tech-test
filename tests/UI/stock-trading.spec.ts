@@ -2,7 +2,7 @@ import { test, } from '../../fixtures/page-object-feature';
 import { handleCookiePopUp } from "../../utils/helpers";
 import { STOCK_DATA } from '../../testData/stockData';
 
-test.describe('Run tests on unrestricted freetrade page', () => {
+test.describe('ui tests', () => {
   test.beforeEach(async ({ stockNavigationPage, page  }) => {
     await stockNavigationPage.navigateToUniversePage(STOCK_DATA.TESLA.name);
     await handleCookiePopUp( page, 'Reject all');

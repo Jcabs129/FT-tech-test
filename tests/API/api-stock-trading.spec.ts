@@ -1,5 +1,5 @@
 import { test,  expect } from "@playwright/test";
-import { apiRequest } from '../../utils/apiUtils.ts'
+import { apiRequest } from '../../utils/apiRequest.ts'
 
 test.describe('API Test - verify 200 success', () => {
   test('verify 200 success for palantir', { tag: '@api' },
