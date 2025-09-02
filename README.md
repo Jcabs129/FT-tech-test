@@ -2,9 +2,19 @@
 
 Small Playwright test suite covering UI and API flows for Freetrade web.
 
+### Table of Contents
+- [Stack](#stack)
+- [Project Structure](#project-structure)
+- [CLI Usage](#cli-usage)
+- [Configuration](#configuration)
+- [Conventions](#conventions)
+- [Simple GitHub Workflow](#simple-github-workflow)
+- [Notes](#notes)
+
 ### Stack
 - **Runtime**: Node.js
 - **Tests**: Playwright Test (`@playwright/test`)
+- **language**: typescript
 
 ### Project Structure
 ```
@@ -30,11 +40,6 @@ Utilities:
 - `utils/apiRequest.ts` (HTTP requests)
 - `utils/assertNumericValues.ts` (numeric comparisons)
 - `utils/helpers.ts` (misc helpers)
-
-### Setup
-```bash
-npm ci
-```
 
 ### CLI Usage
 - **Run all tests (Chromium, list reporter):**
