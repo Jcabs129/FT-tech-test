@@ -24,10 +24,10 @@ jobs:
       - name: Install Chromium only
         run: npx playwright install chromium
 
-      - name: Run Playwright UI tests
+      - name: Run UI tests
         run: npx playwright test tests/
 
-      - name: Run Playwright API tests
+      - name: Run API tests
         run: npm run api
 
       - uses: actions/upload-artifact@v4

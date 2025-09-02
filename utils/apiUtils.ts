@@ -14,20 +14,24 @@ export async function apiRequest(
 ): Promise<APIResponse> {
   const endpoint = `/universe/${locale}/${stockTicker}`;
 
+  const headers = {
+    'content-type': 'application/json',
+  }
+
   let response: APIResponse;
 
   switch (method) {
     case 'GET':
-      response = await request.get(endpoint);
+      response = await request.get(endpoint, { headers });
       break;
     case 'POST':
-      response = await request.post(endpoint);
+      response = await request.post(endpoint, { headers });
       break;
     case 'PUT':
-      response = await request.put(endpoint);
+      response = await request.put(endpoint, { headers });
       break;
     case 'DELETE':
-      response = await request.delete(endpoint);
+      response = await request.delete(endpoint, { headers });
       break;
     default:
       throw new Error(`Unsupported HTTP method: ${method}`);
